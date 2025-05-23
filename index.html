@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Roku Remote</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>📺 Roku Remote</h1>
+
+  <div class="button-grid">
+    <button onclick="sendCommand('Home', event)">Home</button>
+    <button onclick="sendCommand('Back', event)">Back</button>
+    <button onclick="sendCommand('Info', event)">Info</button>
+
+    <button></button>
+    <button onclick="sendCommand('Up', event)">↑</button>
+    <button></button>
+
+    <button onclick="sendCommand('Left', event)">←</button>
+    <button onclick="sendCommand('Select', event)">OK</button>
+    <button onclick="sendCommand('Right', event)">→</button>
+
+    <button></button>
+    <button onclick="sendCommand('Down', event)">↓</button>
+    <button></button>
+
+    <button class="channel-btn" onclick="launchApp('12', event)">Netflix</button>
+    <button class="channel-btn" onclick="launchApp('650682', event)">CTV</button>
+    <button class="channel-btn" onclick="launchApp('837', event)">YouTube</button>
+    <button class="channel-btn" onclick="launchApp('14295', event)">Acorn TV</button>
+    <button class="channel-btn" onclick="launchApp('259870', event)">Global TV</button>
+    <button class="channel-btn" onclick="launchApp('278425', event)">Crave</button>
+
+    <button onclick="sendCommand('Rev', event)">Rev</button>
+    <button onclick="sendCommand('Play', event)">Play/Pause</button>
+    <button onclick="sendCommand('Fwd', event)">Fwd</button>
+  </div>
+
+  <div class="text-input-wrapper">
+    <input id="textInput" type="text" placeholder="Type something to send…" />
+    <button id="sendButton" onclick="submitText()">Send</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
